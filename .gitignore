@@ -1,0 +1,3 @@
+setup/root-cas/*.crt
+setup/root-cas/*.key
+setup/root-cas/*.pem
