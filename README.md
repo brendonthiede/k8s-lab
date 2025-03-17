@@ -73,6 +73,20 @@ kubectl get --raw='/readyz?verbose'
 kubectl get all -A
 ```
 
+## Accessing the cluster without using shell
+
+Multipass has the ability to define aliases for commands run on specific instances. To create an alias of `labctl` that will execute `kubectl` on the control plane node, you can run the following:
+
+```bash
+multipass alias k8s-cp:kubectl labctl
+```
+
+Multipass will give you instructions on how to add the alias directory to your path, which can let you use the command we just defined directly, otherwise you can run it with `multipass` prefixing it, like this:
+
+```bash
+multipass labctl version
+```
+
 ## Cleaning up
 
 After you are done with these, or if you want to start over again for any reason, just delete the VMs and then run a purge:
