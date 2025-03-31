@@ -28,7 +28,6 @@ multipass transfer -r setup k8s-worker1:/home/ubuntu/setup
 multipass exec k8s-worker1 -- bash -c "chmod +x /home/ubuntu/setup/vm-scripts/*.sh"
 ```
 
-
 ## Basic VM Configuration
 
 Each VM has some basic packages installed and some standard configuration. The script `setup/vm-scripts/setup-vm.sh` will need to be executed on each VM.

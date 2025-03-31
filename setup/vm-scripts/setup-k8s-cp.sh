@@ -1,14 +1,10 @@
 #!/usr/bin/env bash
 
-EXTRA_SANS=$1
+set -e
 
 # Start kubelet and run kubeadm init
 sudo systemctl enable --now kubelet
-if [ -n "$EXTRA_SANS" ]; then
-    sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-cert-extra-sans "$EXTRA_SANS"
-else
-    sudo kubeadm init --pod-network-cidr=10.244.0.0/16
-fi
+sudo kubeadm init --control-plane-endpoint "$(hostname -s)" --pod-network-cidr=10.244.0.0/16
 
 # Configure kubectl for the current user
 mkdir -p $HOME/.kube
