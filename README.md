@@ -1,6 +1,6 @@
 # k8s-lab
 
-Helps you create a lab environment for Kubernetes using Multipass and kubeadm.
+Helps you create a lab environment for Kubernetes using Multipass and kubeadm. There are also some [lab exercises](./labs/README.md) to help you practice your skills for the Certified Kubernetes Administrator (CKA) exam.
 
 ## Prerequisites
 
